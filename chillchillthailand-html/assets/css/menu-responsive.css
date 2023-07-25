@@ -1,0 +1,146 @@
+/* Menu Fixed Top */
+.TopHeader { background:#fff; display: inline; border-bottom: 1px solid #eee; color:#123; padding: 1em 1em 0.8em 1em; /*overflow:hidden;*/ position: fixed; left:0; top:0; width:100%; box-sizing:border-box; transition: top 0.6s; z-index: 999999999999; }
+.TopHeader.off-canvas { top: -89px; }
+.TopHeader.fixed { top:0; z-index: 999999999999; }
+.TopLogo { max-width:auto; height :auto; }
+.TopLogo a{ color:#123; font-weight: 500; }
+.pull-left {  text-align: left; float: left; width: 20%; }
+.pull-right {  text-align: right; float: right; width: 20%; font-size: 13px; line-height: 25px; }
+
+/* TopMenuCenter */
+.TopMenuCenter {  display: inline-block; width: 60%; text-align: center; }
+.TopMenuCenter ul{ display: inline-block; margin:0; padding: 0; }
+.TopMenuCenter li { display: inline; text-align: center; margin-left: 1em; position: relative; margin-right: 1.2em; }
+.TopMenuCenter li:after{ position: absolute; content: ''; width: 3px; height:3px; background-color: #ccc; border-radius: 100px; right: -25px; top: 11px; }
+.TopMenuCenter li a { color:#123; text-decoration:none; font-size: 13px; letter-spacing: 2px; transition: all 0.2s; }
+.TopMenuCenter li a:hover{ color: #1f8c67; transition: all 0.2s; }
+.TopMenuCenter li:last-child{ margin-right: 0; }
+.TopMenuCenter li:last-child:after{ display: none; }
+
+p.TopLogoTXT{ margin: 0; padding: 0; display: inline-block; font-family: 'Noto Sans Thai', sans-serif; letter-spacing: 2px; font-size: 22px; font-weight: 600; color: #183153; }
+p.TopLogoTXT span{ color: #FAB006;}
+
+/* Toggle Menu */
+.toggle-mnu{ display: none; }
+
+/* LeftMenuMobile */
+.LeftMenuMobile h2{ display: none; }
+
+/* SocialMenu */
+.SocialMenu { display: none; }
+
+nav {
+    margin-bottom: 45px;   
+}
+
+nav .sidebar {
+    background: #fff;
+    padding: 25px 55px;
+    position: fixed;
+    right: -228px;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+}
+
+nav h1 {
+    float: left;
+    margin: 15px;
+}
+
+ul.sidebar li {
+    padding: 7px 0;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+ul.sidebar li:hover {
+    background-color: #eee;
+}
+
+ul.sidebar li a {
+    color: #333;
+}
+
+.bg-body {
+    background-color: rgba(0, 0, 0, 0.59);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.btn-nav {
+    display: table;
+    margin-left: auto;
+    font-size: 1.5em;
+    margin-right: 27px;
+    color: #333;
+    background-color: transparent;
+    padding-top: 15px;
+}
+.btn-close{
+    color: #333;
+    font-size: 18px;
+}
+
+.showing {
+    right: 0px !important;
+}
+
+.bg-body-show {
+    display: block !important;
+}
+
+
+/* -------------------------------------  640px  ------------------------------------- */
+@media(max-width:1023px)
+{
+	.TopHeader { background-color: #123; width: 99.8%; margin: 0.1%;}
+
+	/* Toggle Menu */
+	.toggle-mnu { display: inline-block; width: 20px; height: 20px; margin-top: 2px; margin-right: 15px; position: relative; z-index: 9999999999999; }
+	.toggle-mnu span:after, .toggle-mnu span:before { content: ""; position: absolute; left: 0; top: 7px; }
+	.toggle-mnu span:after { top: 14px; }
+	.toggle-mnu span { position: relative; display: block; }
+	.toggle-mnu span, .toggle-mnu span:after, .toggle-mnu span:before { width: 100%; height: 2px; background-color: #fff; transition: all 0.3s; backface-visibility: hidden; border-radius: 2px; }
+	.toggle-mnu.on span { background-color: transparent; }
+	.toggle-mnu.on span:before { transform: rotate(45deg) translate(-1px, 0px); background-color: #123; }
+	.toggle-mnu.on span:after { transform: rotate(-45deg) translate(6px, -6px); background-color: #123; }
+	.pull-left { width: 70%; }
+	.pull-right { width: 30%; }
+	.TopLogoTXT{ margin:0px; padding: 0px; display: block; line-height: 20px; }
+
+	/* TopMenuCenter */
+	.TopMenuCenter { position: fixed;  width: 100%; top: 0; left: -250px; padding-top: 50px; transition: all 0.3s; }
+	.TopMenuCenter ul{ margin-top: 30px; }
+	.TopMenuCenter li { display: block; text-align: left; clear: both; margin-left: 0; position: relative; margin-right: 0; }
+	.TopMenuCenter li a { display: block; padding:10px 5px; }
+	.TopMenuCenter li:after{ display: none; }
+
+	/* LeftMenuMobile */
+	.LeftMenuMobile { position: fixed; width: 99.8%; height: 99.8%; margin: 0.1%; padding-top: 50px; top: -700px; transition: all 0.3s; }
+	.LeftMenuMobile h2{ display: block; font-size: 25px; font-weight: 600;}
+	.LeftMenuMobile h2 a { color:#123; transition: all 0.2s; }
+	.LeftMenuMobile h2 a:hover{ color:#1f8c67; transition: all 0.2s; }
+	.LeftMenuMobile h2 span{ position: relative; display:inline-block; font-size: 13px; vertical-align: top; font-weight: normal; letter-spacing: 2px; }
+	.LeftMenuMobile h2 span:before{ position: absolute; content: ''; left: -10px; top: 10px; background-color: #999; width: 5px; height: 1px; }
+	.LeftMenuMobile h2 span:after{ position: absolute; content: ''; right: -10px; top: 10px; background-color: #999; width: 5px; height: 1px; }
+	.OpenMenuMobile{ position: fixed; top: 0.1%; left: 0.1%; padding-top: 50px; width: 99.6%; margin: 0.1%; transition: all 0.3s; background-color: #123; color: #fff; z-index: 999999999999; }
+}
+
+/* -------------------------------------  640px  ------------------------------------- */
+@media(max-width:640px)
+{
+    /*.TopHeader { padding: 0.5em 0.5em; }
+    .TopLogo { margin-top: 5px; }
+    .pull-left { width: 65%; }
+	.pull-right { width: 35%; }*/
+}

@@ -1,0 +1,110 @@
+.seed-social {
+  font-family: sans-serif;
+  font-family: var(--s-heading, sans-serif);
+  font-size: 14px;
+  margin: 1.5em 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  * {
+    box-sizing: border-box;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  > li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    vertical-align: top;
+    &:last-of-type a {
+      margin-right: 0;
+    }
+  }
+  a {
+    color: #fff !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    min-width: 80px;
+    border-radius: 3px;
+    padding: 4px;
+    &:hover {
+      color: #fff;
+      span,
+      svg {
+        opacity: 0.8;
+      }
+    }
+    &:focus,
+    &:active {
+      color: #fff;
+      span,
+      svg {
+        opacity: 0.5;
+      }
+    }
+  }
+  svg,
+  span {
+    color: #fff;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  .text {
+    display: none;
+    pointer-events: none;
+  }
+  .count {
+    background: none;
+    float: none;
+    font-size: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .woocommerce-cart &,
+  .woocommerce-checkout &,
+  .woocommerce-account & {
+    display: none;
+  }
+
+  .facebook {
+    a {
+      background-color: #1877f2;
+    }
+  }
+  .twitter {
+    a {
+      background-color: #55acee;
+    }
+  }
+  .line {
+    a {
+      background-color: #00b900;
+    }
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    a {
+      padding: 4px 10px 4px 8px;
+    }
+    .text {
+      padding-left: 8px;
+      display: flex;
+      font-weight: 500;
+    }
+  }
+}

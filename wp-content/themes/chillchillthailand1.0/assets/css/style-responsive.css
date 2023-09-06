@@ -1,3 +1,10 @@
+/* -------------------------------------  1500px  ------------------------------------- */
+@media(max-width:1500px)
+{
+    /* SingleHeader */
+    .SingleHeader .FeatureImage{ height: 700px; overflow: hidden; }
+}
+
 /* -------------------------------------  1260px  ------------------------------------- */
 @media(max-width:1280px)
 {
@@ -20,6 +27,9 @@
     /* PostReccommend */
     .PostReccommend .PostReccommendBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
 
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
+
     /* Footer */
     footer .FooterBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
 
@@ -28,6 +38,21 @@
 
     /* HeaderPage */
     .HeaderPageBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
+
+    /* SingleHeader */
+    .SingleHeader .FeatureImage{ height: 580px; }
+
+    /* BlogDetail */
+    .BlogDetailBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
+    .BlogDetailBox .LeftBlog{ width: calc(100% - 340px); margin-right: 40px; }
+    .BlogDetailBox .LeftBlog .DetailBlog{ padding: 30px; }
+    .BlogDetailBox .LeftBlog .ExcerptSingleBox{ padding: 30px 30px 0 30px; }
+    .BlogDetail .ShareANDBooking{ max-width: auto; margin-left: 60px; margin-right: 60px;}
+
+    /* PageSearch */
+    .PageSearchBox{ max-width: auto; margin-left: 60px; margin-right: 60px; }
+    .PageSearchBox ul li .Picture{ width: 25%; max-width: 300px; height: 160px; }
+    .PageSearchBox ul li .Descriptions{ width: 70%;}
 }
 
 /* -------------------------------------  1024px  ------------------------------------- */
@@ -41,6 +66,9 @@
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxLeft .large{ height:380px;}
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxLeft .small{ height: 182px;}
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Title{ font-size: 23px;}
+    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links .AffPartners a{ padding: 8px 10px 10px 10px; }
+    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .AffPartners img{ max-width: 70px;  }
+    .HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links .AffPartners a{ padding: 8px 15px 10px 15px; }
 
     /* TravelType2 */
     .TravelType2 .TravelCategoryList{ padding: 0px 10px; }
@@ -50,6 +78,14 @@
     /* PostReccommend */
     .PostReccommend .PostReccommendBox ul li .Picture{ height: 160px; }
     .PostReccommend .PostReccommendBox ul li .Title{ font-size: 16px; }
+
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Picture{ height: 180px; }
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Title{ font-size: 16px; }
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Captions{ font-size: 13px; }
+
+    /* SingleHeader */
+    .SingleHeader .FeatureImage{ height: auto; }
 }  
 
 /* -------------------------------------  1023px  ------------------------------------- */
@@ -68,6 +104,7 @@
 
     /* HotelReccommend */
     .HotelReccommend .HotelReccommendBox{ max-width: 90%; margin: 0 auto; }
+    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links .AffPartners a{ font-size: 14px; }
 
     /* HotelList */
     .HotelList .HotelListBox{ max-width: 90%; margin: 0 auto; }
@@ -80,6 +117,9 @@
     /* PostReccommend */
     .PostReccommend .PostReccommendBox{ max-width: 90%; margin: 0 auto; }
 
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox{ max-width: 90%; margin: 0 auto; }
+
     /* Footer */
     footer .FooterBox{ max-width: 90%; margin: 0 auto; }
     footer .FooterBox .Copyright p:nth-child(1){ width: 40%; }
@@ -90,7 +130,52 @@
 
     /* HeaderPage */
     .HeaderPageBox{ max-width: 90%; margin: 0 auto; }
+
+    /* SingleHeader */
+    .SingleHeader{ margin-top: 0; }
+
+    /* SingleHeader */
+    .SingleHeader .SingleHeaderInner{ max-width: 90%; margin: 0 auto; }
+
+    /* RelatedNewPost */
+    .RelatedNewPost{ max-width: 90%; margin: 0 auto; }
+
+    /* BlogDetail */
+    .BlogDetail{ padding: 0px 0 50px 0;}
+    .BlogDetailBox{ width: 90%; display: block; margin: auto; margin-top: 30px; }
+    .BlogDetailBox .LeftBlog{ width: 100%;  }
+    .BlogDetailBox .RightBlog{ width: 100%; max-width: 450px; margin: auto; margin-top: 40px;  }
+    .BlogDetail .ShareANDBooking{ width: 90%; margin: auto; }
+
+    /* PageSearch */
+    .PageSearchBox{ max-width: 90%; margin: 0 auto; }
+    .PageSearchBox ul li .Picture{ width: 30%; max-width: 300px; height: 160px; }
+    .PageSearchBox ul li .Descriptions{ width: 65%;}
 }   
+
+/* -------------------------------------  800px  ------------------------------------- */
+@media(max-width:800px)
+{
+    /* SinglePostContent */
+    .SinglePostContent{ max-width: 90%; }
+
+    /* FacilitiesBox */
+    .FacilitiesBox{ max-width: 90%; }
+
+    /* ContactinfoSingle */
+    .ContactinfoSingleBox{ max-width: 90%; }
+
+    /* SocialBox */
+    /*.SocialBox{ max-width: 90%; }*/
+
+    /* ShareANDBooking */
+    .ShareANDBooking{ max-width: 90%; }
+
+    /* AboutUsBox */
+    .AboutUsBox{ max-width: 90%; }
+    .AuthorsList{ max-width: 90%; padding: 40px 20px; }
+    .AuthorsList ul li{ margin: 10px 10px; text-align: center; }
+}
 
 /* -------------------------------------  768px  ------------------------------------- */
 @media(max-width:768px)
@@ -116,7 +201,8 @@
     .EatRecommend .EatRecommendBox .EatRecommendHighlight .large .Detail{ width: 95%; padding: 15px 15px 30px 15px;}
     .EatRecommend .EatRecommendBox .EatRecommendHighlight .large .Detail .Title{ font-size: 20px; line-height: 23px;}
     .EatRecommend .EatRecommendBox .EatRecommendHighlight .small{ width:48%; height:193px; }
-    .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title{ font-size: 18px; line-height: 21px;}
+    .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail{ width: 60%;}
+    .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title{ font-size: 16px; line-height: 21px;}
 
     /* HotelReccommend */
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxLeft{ width: 50%;}
@@ -126,16 +212,20 @@
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Title{ font-size: 21px; line-height: 28px;}
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Description{ margin: 20px 0; font-size: 15px;}
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links{ margin-top: 20px;}
-    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a{ padding: 5px 30px;}
+    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a{ padding: 5px 30px 7px 30px; font-size: 14px;}
 
     /* HotelList */
     .HotelList .HotelListBox .HotelListBoxLR{ display: block; }
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft{ width:auto; margin-right: 0;}
-    .HotelList .HotelListBox .HotelListBoxLR .BoxRight{ width:auto; margin: auto; margin-top: 40px;}
+    .HotelList .HotelListBox .HotelListBoxLR .BoxRight{ width:auto; margin: auto; margin-top: 50px;}
 
     /* PostReccommend */
     .PostReccommend .PostReccommendBox ul li .Picture{ height: 140px; }
     .PostReccommend .PostReccommendBox ul li .Title{ font-size: 16px; }
+
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Picture{ height: 140px; }
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Title{ font-size: 16px; }
 
     /* Footer */
     footer .FooterBox .FooterLink ul li:nth-child(1){ width: 33.3%;}
@@ -157,12 +247,18 @@
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxLeft .small{ height: 165px;}
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight{ width: 100%; padding: 0 20px; margin-top: 30px; }
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Title{ font-size: 23px; line-height: 29px;}
+    .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links .AffPartners a{ padding: 10px 15px 12px 15px;}
 
     /* footer */
     footer .FooterBox .Copyright{ display: block;}
     footer .FooterBox .Copyright p:nth-child(1){ width: 100%; text-align: center; margin-bottom: 15px;}
     footer .FooterBox .Copyright p:nth-child(2){ width: 100%; text-align: center;}
     footer .FooterBox .Copyright p:nth-child(2) span{ display: block;}
+
+    /* ShareANDBooking */
+    .ShareANDBooking{ display: block; text-align: center; }
+    .SocialBox{ margin-top: 50px;}
+    .SocialBox .seed-social { text-align: center!important;}
 }
 
 /* -------------------------------------  640px  ------------------------------------- */
@@ -217,8 +313,18 @@
     .PostReccommend .PostReccommendBox ul li:nth-child(odd) { margin-left: 0; margin-right: 2%;}
     .PostReccommend .PostReccommendBox ul li .Title{ font-size: 18px; }
 
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox .Header{margin-bottom: 10px; }
+    .SinglePostReccommend .SinglePostReccommendBox .Header h2{ width: 70%;}
+    .SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll{ width: 30%;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li{ width: 48%; margin: 2% 0 2% 2%;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+0){ margin-right: 0;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+1) { margin-left: 2%;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(odd) { margin-left: 0; margin-right: 2%;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Title{ font-size: 18px; }
+
     /* BacktoTop */
-    .cd-top { bottom: 15px; right: 15px; }
+    .cd-top { bottom: 80px; right: 15px; }
 
     /* Footer */
     footer .FooterBox .FooterLink ul li:nth-child(1){ width: 50%;}
@@ -231,6 +337,32 @@
     /* PageNotFound */
     .PageNotFound .Page404Picture img{ max-width: 280px; }
     .PageNotFound .Page404Title{ font-size: 25px; }
+
+    /* SinglePost */
+    .SinglePost .BreadcrumbsCCT{ display: none;}
+
+    /* SingleHeader */
+    .SingleHeader .SingleHeaderInner{ margin-top: 20px;}
+
+    /* ContactUsBox */
+    .ContactUsBox{ width: 90%; padding: 20px 0; }
+
+    /* BlogDetail */
+    .BlogDetailBox .LeftBlog .DetailBlog{ padding: 20px; font-size: 16px; }
+    .BlogDetailBox .LeftBlog .ExcerptSingleBox{ padding: 20px 20px 0 20px; }
+    .BlogDetailBox .LeftBlog .SocialBox{ margin-top: 0!important;}
+
+    /* PageSearch */
+    .PageSearchBox ul li .Descriptions .Title{ font-size: 18px;}
+    .PageSearchBox ul li .Picture{ width: 35%; max-width: 370px; height: 140px; }
+    .PageSearchBox ul li .Descriptions{ width: 60%;}
+
+    /* AboutUs */
+    .AboutUs{ padding: 0px 0; }
+    .AboutUsBox{ padding: 20px; }
+    .AuthorsList{ padding: 40px 0px; }
+    .AuthorsList ul li .AuthorImage{ width: 120px; height: 120px;}
+    .AuthorsList ul li .AuthorImage img{ width: auto; max-width: 120px; height: auto;}
 }
 
 /* -------------------------------------  480px  ------------------------------------- */
@@ -254,7 +386,8 @@
     .TravelHighlight .TravelHighlightBox .TravelOthersList .Header h2{ width: 100%;}
     .TravelHighlight .TravelHighlightBox .TravelOthersList .Header h2 i{ font-size: 18px; }
     .TravelHighlight .TravelHighlightBox .TravelOthersList .Header .SeeAll{ display: none;}
-    .TravelHighlight .TravelHighlightBox .TravelOthersList ul li{ padding: 10px;}
+    .TravelHighlight .TravelHighlightBox .TravelOthersList ul li{ padding: 0px; margin: 15px 0;}
+    .TravelHighlight .TravelHighlightBox .TravelOthersList ul li:hover{ border: 0px solid #FAB006; }
     .TravelHighlight .TravelHighlightBox .TravelOthersList ul li .Picture{ width:40%; max-width: 150px; margin-right: 10px; height: 120px; }
     .TravelHighlight .TravelHighlightBox .TravelOthersList ul li .Descriptoin{ width:60%;}
     .TravelHighlight .TravelHighlightBox .TravelOthersList ul li .Type{ font-size: 12px;}
@@ -314,12 +447,12 @@
     .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Title{ font-size: 21px; line-height: 28px;}
 
     /* HotelList */
-    .HotelList .HotelListBox{ padding-top: 20px; max-width: 100%;}
+    .HotelList .HotelListBox{ padding-top: 20px; max-width: 100%; border-top: 0px;}
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft{ border-radius: 0;}
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft .HotelTitleOthers{ font-size: 18px;}
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft .HotelTitleOthers i{ padding: 5px; font-size: 15px;}
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft .SeeAll a{ display: none; font-size: 14px;}
-    .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li{ display: block; }
+    .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li{ display: block; margin-bottom: 30px; }
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .Picture{ width:100%; margin-right: 0; min-width: auto; height: 180px; max-width: 100%; }
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .Descriptions{ width: auto; margin-top: 10px;}
     .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .Caption{ font-size: 13px; height: 38px; overflow: hidden; white-space:unset; text-overflow:unset;}
@@ -327,7 +460,7 @@
     .HotelList .HotelListBox .HotelListBoxLR .Viewall i{ font-size: 12px;}
     .HotelList .HotelListBox .HotelListBoxLR .Viewall a{ border: 2px solid #183153; color: #183153; font-weight: 500;  text-align: center; padding: 5px 20px; display: block; background-color: #ffd43b; border-radius: 100px; }
     .HotelList .HotelListBox .HotelListBoxLR .Viewall a:hover i{ padding-left: 10px;}
-    .HotelList .HotelListBox .HotelListBoxLR .BoxRight{ max-width: 100%; }
+    .HotelList .HotelListBox .HotelListBoxLR .BoxRight{ max-width: 90%; }
 
     /* PostReccommend */
     .PostReccommend .PostReccommendBox .Header h2{ width: 100%;}
@@ -344,6 +477,17 @@
     .PostReccommend .PostReccommendBox .Viewall a{ border: 2px solid #183153; color: #183153; font-weight: 500;  text-align: center; padding: 5px 20px; display: block; background-color: #ffd43b; border-radius: 100px; }
     .PostReccommend .PostReccommendBox .Viewall a:hover i{ padding-left: 10px;}
 
+    /* SinglePostReccommend */
+    .SinglePostReccommend .SinglePostReccommendBox .Header h2{ width: 100%;}
+    .SinglePostReccommend .SinglePostReccommendBox .Header h2 i{ font-size: 18px; }
+    .SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll{ display: none;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li{ width: 100%; margin: 10px 0 40px 0!important;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+0){ margin-right: 0;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+1) { margin-left: 0;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(odd) { margin-left: 0; margin-right: 0;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Picture{ height: 200px;}
+    .SinglePostReccommend .SinglePostReccommendBox ul li .Title{ margin: 15px 0 10px 0; font-weight: 600; line-height: 27px; }
+
     /* Footer */
     footer .FooterBox .FooterLink ul{ display: block;}
     footer .FooterBox .FooterLink ul li{ width: 100%!important; margin-bottom: 20px;}
@@ -352,5 +496,58 @@
     footer .FooterBox .FooterLink ul ul li{ margin: 5px 0!important;}
 
     /* HeaderPage */
-    .HeaderPageBox h1{ font-size: 25px; letter-spacing: 0; line-height: 33px;}
+    .HeaderPage{ margin: 10px 0 20px 0;}
+    .HeaderPageBox h1{ font-size: 23px; font-weight: 700; letter-spacing: 0; line-height: 33px;}
+    .BlogDetail .ShareANDBooking{ padding: 0 0px 20px 0px!important;}
+
+    /* CategoryHeader */
+    .CategoryHeader .CategoryHeaderInner{ padding: 30px 20px; }
+    .CategoryHeader .CategoryHeaderInner h1{ font-size: 25px; }
+    .CategoryHeader .CategoryHeaderInner .Captions{ font-size: 14px; }
+
+    /* SingleHeader */
+    .SingleHeader{ border-top: 56px solid #123;}
+    .SingleHeader .SingleHeaderInner h1{ font-size: 23px; line-height: 30px; }
+
+    /* SinglePostContent */
+    .SinglePostContent{ font-size: 16px; }
+
+    /* AffPartnersSingle */
+    .AffPartnersSingle{ margin: 20px 0; }
+
+    /* FacilitiesBox */
+    .Facilities{ padding: 30px 0 30px 0; }
+    .FacilitiesBox ul li{ margin: 3px; }
+    .FacilitiesBox ul li{ font-size: 13px; }
+    .FacilitiesBox ul li i{ font-size: 12px;}
+
+    /* ContactinfoSingle */
+    .ContactinfoSingle{ padding: 30px 0 30px 0; }
+    .ContactinfoSingleBox .ContactinfoSingleInner{ display: block; }
+    .ContactinfoSingleBox .ContactinfoSingleInner .Left{ width: 100%; }
+    .ContactinfoSingleBox .ContactinfoSingleInner .Left ul li p:nth-child(2){ font-size: 15px; }
+    .ContactinfoSingleBox .ContactinfoSingleInner .Map{ width: 100%; margin-top: 20px; }
+    .ContactinfoSingleBox .ContactinfoSingleInner .Map .GoogleMapBox{ padding-bottom: 60%; }
+
+    /* SocialBox */
+    .SocialBox{text-align: center; }
+    .SocialBox .seed-social { text-align: center!important;}
+
+    /* RelatedNewPost */
+    .RelatedNewPost ul li .Picture{ min-width: 120px; max-width: 120px; height: 80px; }
+    .RelatedNewPost ul li .Descriptions .Title{ font-size: 15px; }
+    .RelatedNewPost ul li .Descriptions .Captions{ display: none; }
+    .RelatedNewPost ul li .Descriptions .DateTime{ font-size: 12px; }
+    .RelatedNewPost ul li .Descriptions .DateTime .Newline{ display: block;}
+
+    .wp-block-social-links .wp-social-link span:not(.screen-reader-text) { font-size: 0.55em!important; margin-left: 0.3em!important; margin-right: 0.3em!important; }
+
+    /* PageSearch */
+    .PageSearch{ padding: 20px 0 0 0;}
+    .PageSearchBox ul li:first-child{ margin-top: 0; }
+    .PageSearchBox ul li:first-child a{ padding-top: 0; }
+    .PageSearchBox ul li a{ display: block; padding: 15px 0 15px 0; }
+    .PageSearchBox ul li .Picture{ width: auto; max-width: 100%; height: auto; }
+    .PageSearchBox ul li .Descriptions{ width: auto;}
+    .PageSearchBox ul li .Descriptions .Title{ font-size: 18px; margin-top: 10px;}
 }

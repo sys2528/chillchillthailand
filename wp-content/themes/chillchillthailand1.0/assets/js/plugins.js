@@ -50,12 +50,14 @@ $(function(){
 });
 /* End Scroll to Fixed */
 
+/* Category top page */
 $(document).ready(function() {
 	$(this).on("click", ".OpenCategory", function() {
 	  $(this).parent().find(".CategoryList").toggle('fast');
 	  $(this).find(".fa").toggleClass('active');
 	});
 });
+/* End Category top page */
 
 /* Toggle Menu */
 $(".toggle-mnu").click(function() {
@@ -71,7 +73,6 @@ function ClickMenu(id){
 	$('.LeftMenuMobile').toggleClass('OpenMenuMobile');
 };
 /* End Mobile Menu */
-
 
 /* Back to Top */
 jQuery(document).ready(function($){
@@ -95,7 +96,6 @@ jQuery(document).ready(function($){
 });
 /* End Back to Top */
 
-
 /* Menu Click */
 $('.btn-nav').on('click', function() {
 	$('.MenuList').addClass('showing');
@@ -104,25 +104,3 @@ $('.btn-close').on('click', function() {
 	$('.MenuList').removeClass('showing');
 });
 /* End Menu Click */
-
-/* TravelSlide */
-$('.TravelSlide').slick({
-	autoplay: true,
-  	autoplaySpeed: 4000,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dots: false,
-	centerMode: false,
-	focusOnSelect: true,
-	fade: true,
-	responsive: [
-		{
-		  breakpoint: 480,
-		  settings: {
-			arrows: false,
-			dots: true,
-		  }
-		}
-	  ]
-  });

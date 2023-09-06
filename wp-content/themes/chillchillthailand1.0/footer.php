@@ -52,19 +52,52 @@
     <!-- End FooterBox -->
 
     <!-- BacktoTop -->
-    <a href="javascript:void(0);" class="cd-top">TOP</a>
+    <a href="javascript:void(0);" class="cd-top" name="Back to Top">TOP</a>
 	<!-- ENd BacktoTop -->
 </footer>
 <!-- End Footer -->
+<?php wp_reset_query(); ?>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-migrate-3.4.0.min.js"></script>
+<?php if ( is_front_page() || is_archive() ){ ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/slick/slick.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/js/plugins.js"></script>
 <script type="text/javascript">
-    /* JavaScript */
-    /* Ennd JavaScript */
+    $(document).ready(function() {
+        /* TravelSlide */
+        $('.TravelSlide').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+            fade: true,
+            responsive: [
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+                }
+            ]
+        });
+    });
 </script>
+<?php } ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/js/plugins.js"></script>
+<?php if ( is_single() && 'post' == get_post_type() ) { ?>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/venobox2/venobox.js"></script>
+<script type="text/javascript">
+	$('.venobox').venobox({});
+	new VenoBox({
+		selector: '.wp-block-gallery',
+	});
+</script>
+<?php } ?>
 <?php wp_footer(); ?>
 </body>
 </html>

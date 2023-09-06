@@ -1,17 +1,16 @@
 @charset "UTF-8";
 @import 'sanitize.css';
-body { margin: 0; padding: 0; color: #123; background-color: #edf0f2; /*font-family: 'Noto Serif Thai', serif;*/ font-family: 'Sarabun', sans-serif; font-size:16px; }
+body { margin: 0; padding: 0; color: #123; background-color: #edf0f2; font-family: 'Sarabun', sans-serif; font-size:16px; }
 h1,h2,h3,h4,h5,h6{ margin: 0; padding: 0; font-weight: normal; letter-spacing: 2px; font-family: 'Noto Sans Thai', sans-serif; }
 ul,li,ol{ margin: 0; padding: 0; list-style: none;}
 a{ text-decoration: none; cursor: pointer; }
 .clr:after{ content:""; display:block; height:0; clear:both; visibility:hidden; }
 
-
 .BGHome{ margin-top: 60px; background-color: #f4f6f7; background: url(../images/bg/bg-type15.jpg) no-repeat; background-size: cover; background-position: top center;}
 /* TravelType */
 .TravelType{ width: auto; height: auto; padding: 100px 0 100px 0; /*background-color: #183153;*/ /* background: url(../images/bg/bg-type10.jpg) no-repeat; background-size: cover; background-position: center;*/}
 .TravelType .TravelTypeBox{ width: auto; max-width: 900px; margin: auto; text-align: center; }
-.TravelType .TravelTypeBox h1{ font-size: 25px; font-weight: 700; letter-spacing: 0px; margin-bottom: 20px;}
+.TravelType .TravelTypeBox h1{ font-size: 23px; font-weight: 700; letter-spacing: 0px; margin-bottom: 20px;}
 .TravelType .TravelTypeBox .ChoosePlace{ margin: 0; font-size: 20px; font-weight: 400; letter-spacing: 0; color: #FAB006;}
 .TravelType .TravelTypeBox .FindPlace{ margin: 0; font-family: 'Noto Sans Thai', sans-serif; font-size: 45px; font-weight: 600; letter-spacing: 0px;}
 .TravelType .TravelTypeBox ul{ display: flex; flex-wrap: wrap; align-items: center; margin-top: 40px;}
@@ -39,7 +38,8 @@ a{ text-decoration: none; cursor: pointer; }
 .TravelType2 .TravelCategoryList ul li:hover{ /*background-image: linear-gradient(150deg, #183153 30%, #000 80%);*/ background-color: #183153; border: 2px solid #FAB006; color: #ffd43b; transition: .3s ease;}
 .TravelType2 .TravelCategoryList ul li a:hover .Title{ color: #ffd43b; transition: .3s ease;}
 .TravelType2 .TravelCategoryList ul li a:hover .Icon{ color: #ffd43b; top:-5px; transition: .3s ease;}
-.TravelType2 .TravelCategoryList .OpenCategory{ cursor: pointer;}
+.TravelType2 .TravelCategoryList .OpenCategory{ cursor: pointer; font-weight: 600; }
+.TravelType2 .TravelCategoryList .OpenCategory span i{ font-size: 14px; padding: 5px 8px; border-radius: 100px; background-color:#ffd43b; color: #183153;}
 .TravelType2 .TravelCategoryList .CategoryList { display: none; margin-top: 0px;}
 .TravelType2 .TravelCategoryList .fa { transition: transform .2s; transform: rotateZ(90deg); display: block; }
 .TravelType2 .TravelCategoryList .fa.active { transform: rotateZ(270deg); }
@@ -52,6 +52,8 @@ a{ text-decoration: none; cursor: pointer; }
 
 /* TravelHighlight */
 .TravelHighlight{ width: auto; height: auto; padding: 80px 0 100px 0; clear: both; background-color: #fff;}
+.TravelAllArchrive{ padding: 40px 0 40px 0!important; margin: 0!important; background-image:none!important; background-color: transparent!important;}
+.TravelAllArchriveList{ padding: 40px 0 40px 0!important; margin: 0!important; background-image:none!important; background-color: #fff!important;}
 .TravelHighlight .TravelHighlightBox{ width: auto; max-width: 1160px; margin: auto; }
 .TravelHighlight .TravelHighlightBox h2{ font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: left;}
 .TravelHighlight .TravelHighlightBox h2 i{ padding: 5px; border-radius: 100px; background-color:#ffd43b; color: #183153;}
@@ -112,8 +114,8 @@ a{ text-decoration: none; cursor: pointer; }
 .TravelHighlight .TravelHighlightBox .TravelOthersList .Viewall{ display: none; font-family: 'Noto Sans Thai', sans-serif; }
 
 /* EatRecommend */
-.EatBGSection{ /*background-color: #f4f6f7;*/ background-image: linear-gradient(150deg, #4DA0B0 30%, #D39D38 80%);}
-.EatRecommend{ width: auto; height: auto; padding: 100px 0 100px 0; clear: both; position: relative; /*background-color: #f4f6f7;*/ background-image: linear-gradient(150deg, #4DA0B0 30%, #D39D38 80%);}
+.EatBGSection{ /*background-color: #f4f6f7;*/ background-image: linear-gradient(150deg, #ECE9E6 80%, #ffd452 100%);}
+.EatRecommend{ width: auto; height: auto; padding: 100px 0 100px 0; clear: both; position: relative; /*background-color: #f4f6f7;*/ background-image: linear-gradient(150deg, #ECE9E6 60%, #183153 100%);}
 .EatRecommend .EatRecommendBox{ width: auto; max-width: 1160px; margin: auto; }
 .EatRecommend .EatRecommendBox h2{ font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: left;}
 .EatRecommend .EatRecommendBox h2 i{ padding: 5px; border-radius: 100px; background-color:#ffd43b; color: #183153;}
@@ -138,12 +140,12 @@ a{ text-decoration: none; cursor: pointer; }
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small p{ margin: 0; padding: 0;}
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Pic{ margin: 0; padding: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Pic img{ display: block; width: 100%; height: 100%; object-fit: cover; transition: .3s ease;}
-.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail{ position: absolute; width: 55%; top: 10px; left: 10px; z-index: 2; background-color: rgba(0, 0, 0, 0.8); display: block; padding: 15px 15px 30px 15px; border-radius: 15px; }
-.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title{ font-size: 16px; line-height: 25px; margin: 5px 0; font-weight: 600; font-family: 'Noto Sans Thai', sans-serif;}
+.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail{ position: absolute; width: 50%; top: 10px; left: 10px; z-index: 2; background-color: rgba(0, 0, 0, 0.8); display: block; padding: 15px 15px 30px 15px; border-radius: 15px; }
+.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title{ font-size: 16px; line-height: 21px; margin: 5px 0; font-weight: 600; font-family: 'Noto Sans Thai', sans-serif;}
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title a{ color: #FAB006; transition: .3s ease;}
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Title a:hover{ color: #ffd43b; transition: .3s ease;}
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Type{ font-size: 12px; color: #999;}
-.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .DateTime{ font-size: 13px; color: #ccc;}
+.EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .DateTime{ font-size: 13px; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .DateTime i{ font-size: 13px; }
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Links{ position:absolute; right: 0; bottom: 0; width: 100%; max-width: 120px; text-align: center; }
 .EatRecommend .EatRecommendBox .EatRecommendHighlight .small .Detail .Links a{ color: #183153; display: block; padding: 4px 0; border-radius: 15px 0px 15px 0px; background-color:#FAB006; /*border: 1px solid;*/ font-size: 13px; transition: .3s ease; }
@@ -163,6 +165,7 @@ a{ text-decoration: none; cursor: pointer; }
 .EatRecommend .EatRecommendList .Header .SeeAll a:hover{ background-color: #183153; color:#f8dd7c; transition: .3s ease; }
 .EatRecommend .EatRecommendList ul{ margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
 .EatRecommend .EatRecommendList ul li{ width: 32%; margin: 1% 1% 4% 1%; padding-bottom: 30px; position: relative; background-color:#fff; color: #fff; height:auto; position: relative; z-index: 1; border-radius: 15px; overflow: hidden; transition: .3s ease;}
+.TravelAllArchriveList .EatRecommendList ul li { border: 1px solid #f2f2f2;}
 .EatRecommend .EatRecommendList ul li:nth-child(3n+0){ margin-right: 0;}
 .EatRecommend .EatRecommendList ul li:nth-child(3n+1) { margin-left: 0;}
 .EatRecommend .EatRecommendList ul li .EatListBox{ width:100%; background-color:#fff; color: #fff; height:auto; position: relative; z-index: 1; }
@@ -174,7 +177,7 @@ a{ text-decoration: none; cursor: pointer; }
 .EatRecommend .EatRecommendList ul li .EatListBox .Detail .Title a{ color: #183153; transition: .3s ease;}
 .EatRecommend .EatRecommendList ul li .EatListBox .Detail .Title a:hover{ color: #FAB006; transition: .3s ease;}
 .EatRecommend .EatRecommendList ul li .EatListBox .Detail .Type{ font-size: 12px; color: #444;}
-.EatRecommend .EatRecommendList ul li .EatListBox .Detail .DateTime{ font-size: 13px; color: #444;}
+.EatRecommend .EatRecommendList ul li .EatListBox .Detail .DateTime{ font-size: 13px; color: #444; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .EatRecommend .EatRecommendList ul li .EatListBox .Detail .DateTime i{ font-size: 13px; }
 .EatRecommend .EatRecommendList ul li .Links{ margin: 0; position:absolute; right: 0; bottom: 0; width: 100%; max-width: 130px; text-align: center; }
 .EatRecommend .EatRecommendList ul li .Links a{ color: #183153; display: block; padding: 4px 0; border-radius: 15px 0px 15px 0px; background-color:#FAB006; font-size: 13px; transition: .3s ease; }
@@ -210,10 +213,14 @@ a{ text-decoration: none; cursor: pointer; }
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .TypeandFacilities a{ color: #999;}
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .TypeandFacilities i{ font-size: 13px; padding: 5px; background-color: #ffd43b; color: #183153; border-radius: 100px;}
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links{ margin-top: 30px; font-weight: 500;}
-.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a{ padding: 6px 40px 8px 40px; border-radius: 100px; background-color:#FAB006; border: 1px solid; color: #183153; transition: .3s ease;}
+.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a{ padding: 6px 30px 8px 30px; margin-right: 5px; border-radius: 100px; background-color:#FAB006; border: 1px solid; color: #183153; transition: .3s ease;}
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a:hover{ background-color:#183153; color: #ffd43b; transition: .3s ease;}
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a i{ font-size: 13px; transition: .3s ease;}
 .HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links a:hover i{ margin-left: 5px; transition: .3s ease;}
+.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .AffPartners{ display: block; margin-top: 30px;}
+.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .AffPartners img{ width: auto; max-width: 80px; height: auto; max-height: 22px; vertical-align: middle; margin-left: 5px;}
+.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links .AffPartners a{ background-color: #eee; padding: 10px 20px 12px 20px; border: 1px solid #ccc; }
+.HotelReccommend .HotelReccommendBox .HotelReccommendBoxLR .BoxRight .Links .AffPartners a:hover{ color: #000; background-color: #ccc; }
 
 /* HotelList */
 .HotelList{ width: auto; height: auto; padding: 0 0 100px 0; clear: both; background-color: #fff;}
@@ -242,21 +249,36 @@ a{ text-decoration: none; cursor: pointer; }
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .Title a:hover{ color: #FAB006; transition: .3s ease;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .Title a{ color: #FAB006; transition: .3s ease;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .Caption{ margin-left: 15px; font-size: 14px; color: #666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .TypeandFacilities{ margin-left: 15px; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 5px; font-size: 13px; color: #999; }
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .TypeandFacilities{ margin-left: 15px; border-top: 1px solid #eee; padding-top: 10px; margin-top: 5px; font-size: 13px; color: #999; }
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .TypeandFacilities a{ color: #999;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .TypeandFacilities i{ font-size: 13px; padding: 5px; background-color: #f1e5bc; color: #183153; border-radius: 100px;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .TypeandFacilities i{ background-color: #ffd43b;}
-.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .ReadMore{ display: none; transition: .3s ease;}
+/*.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .ReadMore{ display: none; transition: .3s ease;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li .ReadMore i{ font-size: 11px;}
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .ReadMore{ position: absolute; display: block; right: 0; bottom: 0; transition: .3s ease; }
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .ReadMore a{ background-color: #FAB006; color: #183153; border: 1px solid; border-radius: 100px; font-size: 14px; padding: 5px 20px 8px 20px; transition: .3s ease; }
 .HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .ReadMore a:hover{ background-color: #183153; color: #ffd43b; transition: .3s ease;}
-.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .ReadMore a:hover i{ margin-left: 5px; transition: .3s ease;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .ReadMore a:hover i{ margin-left: 5px; transition: .3s ease;}*/
 .HotelList .HotelListBox .HotelListBoxLR .Viewall{ display: none; font-family: 'Noto Sans Thai', sans-serif;}
-.HotelList .HotelListBox .HotelListBoxLR .BoxRight{ width: calc(100% - 400px); max-width: 300px; height: auto; text-align: center; border-radius: 15px; overflow: hidden; background-color: #eee; }
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight{ width: calc(100% - 400px); max-width: 300px; height: auto; text-align: center; /*background-color: #eee;*/ }
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight .BoxRightInner{ border-radius: 15px; overflow: hidden; position: relative; }
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight .BookingADS{ padding: 20px; background-color: #003580; color: #fff;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight .AgodaADS{ padding: 20px; background-color: rgb(253, 238, 230); color: #000;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight .BannerADS{ padding: 0px;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxRight .BannerADS img{ width: 100%; max-width: 100%; height: auto;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links{ margin-top: 20px; font-size: 14px; font-weight: 500;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links a{ padding: 6px 30px 8px 30px; margin-right: 5px; border-radius: 100px; background-color:#FAB006; border: 1px solid; color: #183153; transition: .3s ease;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links a:hover{ background-color:#183153; color: #ffd43b; transition: .3s ease;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links a i{ font-size: 13px; transition: .3s ease;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links a:hover i{ margin-left: 5px; transition: .3s ease;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .AffPartners{ display: block; margin-top: 0px;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .AffPartners img{ width: auto; max-width: 80px; height: auto; max-height: 20px; vertical-align: middle; margin-left: 5px;}
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft ul li:hover .AffPartners img{ transform: scale(1.0); }
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links .AffPartners a{ display: inline-block; background-color: #eee; padding: 8px 20px 10px 20px; border: 1px solid #ccc; }
+.HotelList .HotelListBox .HotelListBoxLR .BoxLeft .Links .AffPartners a:hover{ color: #000; background-color: #ccc; }
 
 /* PostReccommend */
-.PostReccommend{ width: auto; height: auto; padding: 80px 0; clear: both; background-image: linear-gradient(150deg, #edf0f2 30%, #D4D3DD 80%);}
+.PostReccommend{ width: auto; height: auto; padding: 80px 0; clear: both; background-image: linear-gradient(150deg, #ECE9E6 30%, #ffffff 80%);}
 .PostReccommend .PostReccommendBox{ width: auto; max-width: 1160px; margin: auto; }
 .PostReccommend .PostReccommendBox .Header{ display: flex; align-items: center; margin-bottom: 0px;}
 .PostReccommend .PostReccommendBox .Header h2{ width: 50%; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: left;}
@@ -280,32 +302,57 @@ a{ text-decoration: none; cursor: pointer; }
 .PostReccommend .PostReccommendBox ul li .Title a:hover{ color: #FAB006; transition: .3s ease;}
 .PostReccommend .PostReccommendBox ul li .DateTime{ font-family: Helvetica Neue,Helvetica,Thonburi,Arial,sans-serif; font-size: 12px; color: #8d8d8d; font-weight: 400; display: flex; justify-content: space-between;}
 .PostReccommend .PostReccommendBox ul li .DateTime span{ display: inline-block; margin-right: 10px;}
-.PostReccommend .PostReccommendBox ul li .DateTime span.TypeShow{ display: inline-block; padding: 1px 10px 3px 10px; background-color: #ddd; font-size: 11px; border-radius: 100px;}
+.PostReccommend .PostReccommendBox ul li .DateTime span.TypeShow{ display: inline-block; padding: 1px 10px 3px 10px; background-color: #eee; font-size: 11px; border-radius: 100px;}
 .PostReccommend .PostReccommendBox .Viewall{ display: none; font-family: 'Noto Sans Thai', sans-serif; }
 .EmptyData{ color: red; font-weight: 600; text-align: center; }
 .Center{ text-align: center;}
+.bgWhite{ background-color: #fff!important; background-image:none!important;}
+.bgTranparent{ background-color: transparent!important; background-image:none!important; }
+.BorderTop{ border-top: 1px solid #eee; padding-top: 40px;}
 
 /* HeaderPage */
 .HeaderPage{ width: auto; height: auto; margin: 20px 0;}
 .HeaderPageBox{ width: auto; max-width: 1160px; margin: auto;}
-.HeaderPageBox h1{ font-size: 30px; font-weight: 600; letter-spacing: 1px;}
+.HeaderPageBox h1{ font-size: 26px; font-weight: 600; letter-spacing: 0px;}
 .HeaderPageBox .Captions{ font-size: 16px; padding-left: 15px; border-left: 5px solid #FAB006;}
-.HeaderPageBox .DateCategory{ font-size: 14px; font-weight: 300; padding-left: 15px; border-left: 5px solid #FAB006; color: #999;}
+.HeaderPageBox .DateCategory{ font-size: 13px; font-weight: 300; padding-left: 15px; border-left: 5px solid #FAB006; color: #999;}
+.HeaderPageBox .DateCategory span.CategorySingleBlog{ border-radius: 100px; background-color: #ccc; padding: 1px 8px; font-size: 12px; display: inline-block; }
 
 /* BlogDetail */
 .BlogDetail{ width: auto; height: auto; margin: auto; padding: 0px 0 80px 0;}
 .BlogDetailBox{ width: auto; max-width: 1160px; margin: auto; display: flex; flex-wrap: wrap; margin-top: 40px; }
-.BlogDetailBox .LeftBlog{ width: calc(100% - 380px); padding: 40px; margin-right: 80px; background-color: #fff; border-radius: 10px; }
-.BlogDetailBox .LeftBlog .FeatureImageBlog{ width: auto; height: auto; margin: auto; margin-bottom: 40px;}
-.BlogDetailBox .LeftBlog .FeatureImageBlog img{ width: auto; max-width: 100%; height: auto;}
-.BlogDetailBox .LeftBlog .DetailBlog{ margin: auto; font-size: 16px; font-weight: 400; line-height: 25px;}
-.BlogDetailBox .LeftBlog .DetailBlog p{ margin: 15px 0;}
+.BlogDetailBox .LeftBlog{ width: calc(100% - 380px); margin-right: 80px; background-color: #fff; border-radius: 15px; overflow: hidden; }
+.BlogDetailBox .LeftBlog .FeatureImageBlog{ width: auto; height: auto; margin: auto; margin-bottom: 0px;}
+.BlogDetailBox .LeftBlog .FeatureImageBlog img{ width: 100%; max-width: 100%; height: auto;}
+.BlogDetailBox .LeftBlog .DetailBlog{ margin: auto; padding: 40px; font-size: 17px; font-weight: 400; line-height: 28px;}
+.BlogDetailBox .LeftBlog .ExcerptSingleBox{ padding: 30px 40px 0 40px; text-align: center;}
+/*.BlogDetailBox .LeftBlog .DetailBlog p{ margin: 15px 0;}
 .BlogDetailBox .LeftBlog .DetailBlog p img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
 .BlogDetailBox .LeftBlog .DetailBlog img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
 .BlogDetailBox .LeftBlog .DetailBlog a{ color: #FAB006; }
 .BlogDetailBox .LeftBlog .DetailBlog a:hover{ color: #FFD43B; text-decoration: underline; }
 .BlogDetailBox .LeftBlog .DetailBlog h2{ position: relative; margin: 30px 0px 20px 0px; padding-left: 20px; border-left: 10px solid #FAB006; font-size: 30px; font-weight: 500; line-height: 40px; letter-spacing: 0; }
-.BlogDetailBox .LeftBlog .DetailBlog h3{ position: relative; margin: 30px 0px 20px 20px; padding-left: 15px; border-left: 5px solid #FAB006; font-size: 26px; font-weight: 500; line-height: 33px; letter-spacing: 0; }
+.BlogDetailBox .LeftBlog .DetailBlog h3{ position: relative; margin: 30px 0px 20px 20px; padding-left: 15px; border-left: 5px solid #FAB006; font-size: 26px; font-weight: 500; line-height: 33px; letter-spacing: 0; }*/
+.BlogDetailBox .LeftBlog .DetailBlog ul{ margin: 20px 0 20px 20px;}
+.BlogDetailBox .LeftBlog .DetailBlog ul li{ list-style-type: disc!important; }
+.BlogDetailBox .LeftBlog .DetailBlog ol{  margin: 20px 0 20px 20px;}
+.BlogDetailBox .LeftBlog .DetailBlog ol li{ list-style-type: decimal!important; }
+.BlogDetailBox .LeftBlog .DetailBlog p{ margin: 10px 0 15px 0; display: inline-block;}
+.BlogDetailBox .LeftBlog .DetailBlog p img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.BlogDetailBox .LeftBlog .DetailBlog img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.BlogDetailBox .LeftBlog .DetailBlog a{ color: #FAB006; }
+.BlogDetailBox .LeftBlog .DetailBlog a:hover{ color: #183153; text-decoration: underline; }
+.BlogDetailBox .LeftBlog .DetailBlog h2{ position: relative; color: #3d4245; margin: 45px 0px 0px 0px; display: block; padding-left: 23px; font-size: 23px; font-weight: 600; line-height: 33px; letter-spacing: 0; }
+.BlogDetailBox .LeftBlog .DetailBlog h2:before{ width: 20px; height: 30px; position: absolute; content: '\23'; /* f152 | 23 */ font-size: 18px; color:#FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.BlogDetailBox .LeftBlog .DetailBlog h3{ position: relative; color: #3d4245; margin: 30px 0px 0px 20px; padding-left: 23px; font-size: 21px; font-weight: 600; line-height: 30px; letter-spacing: 0; }
+.BlogDetailBox .LeftBlog .DetailBlog h3:before{ width: 20px; height: 30px; position: absolute; content: '\23'; font-size: 18px; color: #FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.BlogDetailBox .LeftBlog .DetailBlog .wp-block-gallery{ margin: 20px 0;}
+.BlogDetailBox .LeftBlog .DetailBlog .wp-block-gallery .wp-block-image img { margin: 0;}
+.BlogDetailBox .LeftBlog .DetailBlog .GoogleMapBox{ margin: 40px 0 0; position: relative; padding-bottom: 60%; height: 0; overflow: hidden; }
+.BlogDetailBox .LeftBlog .DetailBlog .GoogleMapBox iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.BlogDetailBox .LeftBlog .DetailBlog .wp-block-embed-youtube .wp-block-embed__wrapper{ margin: 40px 0 0; position: relative; padding-bottom: 56%; height: 0; overflow: hidden; }
+.BlogDetailBox .LeftBlog .DetailBlog .wp-block-embed-youtube .wp-block-embed__wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.BlogDetailBox .LeftBlog .DetailBlog #toc_container{ max-width: 450px; margin: auto; margin-bottom: 40px!important; margin-top: 0px!important; }
 .BlogDetailBox .RightBlog{ width: calc(100% - 400px); max-width: 300px; }
 .seed-social a{ min-height: 30px!important;}
 .seed-social img{ max-width: 16px!important; max-height: 16px!important;}
@@ -325,13 +372,14 @@ a{ text-decoration: none; cursor: pointer; }
 .RightInfo .DetailIn ul li{ margin: 5px 0; padding: 5px 0; display: flex; flex-wrap: wrap; border-bottom: 1px dotted #f1e5bc; clear: both; overflow: auto;}
 .RightInfo .DetailIn ul li:first-child{ margin-top: 0; padding-top: 0;}
 .RightInfo .DetailIn ul li:last-child{ margin-bottom: 0; padding-bottom: 0; border-bottom: 0px;}
-.RightInfo .DetailIn ul li a{ color: #52595F;}
+.RightInfo .DetailIn ul li a{ color: #52595F; font-weight: 600; line-height: 23px;}
 .RightInfo .DetailIn ul li a:hover{ color: #FAB006;}
 .RightInfo .DetailIn ul li p{ margin: 0;}
 .RightInfo .DetailIn ul li p:nth-child(1){ width: calc(100% - 300px); min-width: 75px; max-width: 75px; height: 75px; margin-right: 15px; border-radius: 10px; overflow: hidden; margin-bottom: 5px; }
 .RightInfo .DetailIn ul li p:nth-child(1) img{ display: block; width: 100%; height: 100%; object-fit: cover; transition: .3s ease;}
 .RightInfo .DetailIn ul li p:nth-child(2){ width: calc(100% - 90px); height: auto; line-height: 19px; overflow: hidden; }
-.RightInfo .AuthorBadge{ margin: 0 auto; text-align: center; max-width: 150px; height: 150px; border-radius: 100px; border: 5px solid #fff; overflow: hidden;}
+.RightInfo .DetailIn ul li p:nth-child(2) .CategorySingleRight{ display: block; font-size: 12px; margin-top: 5px;}
+.RightInfo .AuthorBadge{ margin: 0 auto; text-align: center; max-width: 100px; height: 100px; border-radius: 100px; border: 5px solid #fff; overflow: hidden;}
 .RightInfo .AuthorBadge img{ display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* Footer */
@@ -362,27 +410,28 @@ footer .FooterBox .FooterLink ul li.Icon a:hover .fa-tiktok{ color: #123;}
 footer .FooterBox .Copyright{ color: #666; display: flex; flex-wrap: wrap; padding-top: 30px; margin-top: 30px; border-top: 1px solid #dee2e4; letter-spacing: 1px;}
 footer .FooterBox .Copyright p:nth-child(1){ text-align: left; width: 50%; }
 footer .FooterBox .Copyright p:nth-child(1) a{ padding: 4px 10px; border: 1px solid #ccc; color: #666; border-radius: 3px; letter-spacing: 0; }
-footer .FooterBox .Copyright p:nth-child(1) a:hover{ background-color: #FFD43B; color: #183153; border: 1px solid #183153;}
+footer .FooterBox .Copyright p:nth-child(1) a:hover{ background-color: #FAB006; color: #183153; border: 1px solid #183153;}
 footer .FooterBox .Copyright p:nth-child(2){ text-align: right; width: 50%; font-size: 12px; }
 
 /* BacktoTop */
-.cd-top { display: block; height: 40px; width: 40px; position: fixed; bottom: 20px; right: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); border-radius: 50%; overflow: hidden; text-indent: 100%; white-space: nowrap; background: #FAB006 url(../images/icon/icon-up-solid.svg) no-repeat center; background-size: 50%; visibility: hidden; opacity: 0; z-index: 100; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
+.cd-top { display: block; background-color: #000; height: 40px; width: 40px; position: fixed; bottom: 80px; right: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); border-radius: 50%; overflow: hidden; text-indent: 100%; white-space: nowrap; background: #FAB006 url(../images/icon/icon-up-solid.svg) no-repeat center; background-size: 50%; visibility: hidden; opacity: 0; z-index: 100; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover { -webkit-transition: opacity .3s 0s, visibility 0s 0s; -moz-transition: opacity .3s 0s, visibility 0s 0s; transition: opacity .3s 0s, visibility 0s 0s; }
 .cd-top.cd-is-visible { visibility: visible; opacity: 1; }
 .cd-top.cd-fade-out { opacity: .8; }
 .no-touch .cd-top:hover { background: rgba(250,176,6,1); opacity: 1; }
 
 /* pagination */
-#pagination { padding: 0; margin: 60px 0 60px; overflow: hidden; clear: both; }
-#pagination ul { position: relative; padding: 0; margin: 0; text-align: center; }
-#pagination li { display: inline-block; padding: 0; margin: 0 3px; text-align: center;  list-style: none; border-radius: 3px; }
+.pagination{ padding: 0; font-size: 14px;}
+#pagination { padding: 0; margin: 60px 0 40px; overflow: hidden; clear: both; }
+#pagination ul { position: relative; padding: 0; margin: 0; text-align: center; border-top: 0px; }
+#pagination li { display: inline-block; padding: 0; margin: 0 2px; text-align: center;  list-style: none; border-radius: 3px; }
 #pagination li a { background: #f5f5f5; border-radius: 3px; }
 #pagination li a:hover { background: #FAB006; border-radius: 3px; }
 #pagination li:first-child:hover { opacity: .6; }
 #pagination li span, #pagination li a { position: relative; letter-spacing: .5px; }
-#pagination span, #pagination a { display: block; float: left; width: auto; padding: 15px 10px 15px 10px; margin: 0; color: #000;  text-decoration: none; }
-#pagination .active { padding: 15px 10px 15px 10px; background: #FAB006; border-radius: 3px; }
-#pagination li:first-child span:before, #pagination li:first-child a:before, #pagination li:last-child span:after, #pagination li:last-child a:after { position: absolute; display: block; width: 9px; height: 16px;  margin-top: -7px; content: ""; }
+#pagination span, #pagination a { display: block; float: left; width: auto; padding: 10px 10px 10px 10px; margin: 0; color: #000;  text-decoration: none; }
+#pagination .active { padding: 10px 10px 10px 10px; background: #FAB006; border-radius: 3px; }
+#pagination li:first-child span:before, #pagination li:first-child a:before, #pagination li:last-child span:after, #pagination li:last-child a:after { position: absolute; display: block; width: 9px; height: 12px;  margin-top: -7px; content: ""; }
 #pagination li:first-child a, #pagination li:first-child span{ background: none; }
 #pagination li:first-child span:before, #pagination li:first-child a:before { top: 50%; left: 0; background-size: 9px 16px; }
 #pagination li:last-child:hover { opacity: .6; }
@@ -390,7 +439,7 @@ footer .FooterBox .Copyright p:nth-child(2){ text-align: right; width: 50%; font
 #pagination li:last-child span:after, #pagination li:last-child a:after { top: 50%; right: 0; background-size: 9px 16px; }
 
 /* BreadcrumbsCCT */
-.BreadcrumbsCCT{ width: auto; max-width: 1160px; height: auto; margin: auto; margin-top: 60px; padding: 15px 0; font-size: 13px; color: #8d8d8d; }
+.BreadcrumbsCCT{ width: auto; max-width: 1160px; height: auto; margin: auto; margin-top: 60px; padding: 15px 0; font-size: 12px; color: #8d8d8d; }
 .BreadcrumbsCCT nav p{ margin: 0; padding: 0;}
 .BreadcrumbsCCT a{ color: #8d8d8d; }
 .BreadcrumbsCCT p span.last{ color: #FAB006;}
@@ -403,11 +452,230 @@ footer .FooterBox .Copyright p:nth-child(2){ text-align: right; width: 50%; font
 .PageNotFound .Page404Title{ font-size: 30px; color: #666; }
 
 /* toc */
-#toc_container{ max-width: 450px; margin: auto; margin-bottom: 40px!important; padding: 20px!important; border-radius: 15px; border: 1px solid #f1e5bc!important; }
-#toc_container .toc_title{ font-size: 18px; font-family: 'Noto Sans Thai', sans-serif; position: relative; padding-left: 50px; }
+#toc_container{ max-width: 450px; margin: auto; margin-bottom: 40px!important; margin-top: 40px!important; padding: 20px!important; border-radius: 15px; border: 1px solid #f1e5bc!important; }
+#toc_container .toc_title{ font-size: 18px; font-family: 'Noto Sans Thai', sans-serif; position: relative; padding-left: 50px; display: block; }
 #toc_container .toc_title:before{ width: 40px; height: 20px; font-size: 16px; left: 0; margin-right: 8px; top: 0; content: '\f0ca';font-family: "Font Awesome 5 Free"; }
 #toc_container p.toc_title+ul.toc_list{ margin-left: 20px;}
 #toc_container li{ margin: 6px 0!important; list-style-type: circle!important; line-height: 23px;}
-#toc_container li a{ color: #183153; font-size: 14px; }
+#toc_container li a{ color: #183153; font-size: 15px; }
 #toc_container li ul li{ margin: 0 0!important;}
-#toc_container a:hover{ color: #183153; }
+#toc_container a:hover{ color: #FAB006; }
+
+/* CategoryHeader */
+.CategoryHeader{ background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); /*background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */ position: relative; padding: 0;}
+.CategoryHeader .CategoryHeaderInner{ width: auto; max-width: 1160px; height: auto; margin: auto; padding: 30px 0; text-align: center; }
+.CategoryHeader .CategoryHeaderInner h1{ font-size: 35px; font-weight: 600; letter-spacing: 1px; position: relative; display: inline-block; vertical-align: middle; color: #FAB006; /*border-bottom: 2px solid  #ffd43b;*/}
+.CategoryHeader .CategoryHeaderInner h1 i{ display: inline-block; margin-top: -8px; padding: 6px 10px; vertical-align: middle; background-color: #183153; color: #FAB006; border-radius: 100px; font-size: 20px;}
+/*.CategoryHeader .CategoryHeaderInner h1:after{ width: 50px; height: 2px; position: absolute; left: 0; right: 0; margin: auto; content: ''; background-color: #ffd43b; top: auto; bottom: 0;}*/
+.CategoryHeader .CategoryHeaderInner .Captions{ max-width: 500px; margin: auto; font-size: 15px; font-weight: 300; text-align: left; letter-spacing: 0px; color: #f2f2f2; margin-top: 10px;}
+.CategoryHeader .CategoryHeaderInner .Captions p:first-child{ margin-top: 0;}
+.CategoryHeader .CategoryHeaderInner .Captions p:last-child{ margin-bottom: 0; text-align: center;}
+
+/* SinglePost */
+.SinglePost{ background-color: #fff; width: auto; height: auto;}
+.SinglePost .BreadcrumbsCCT{ margin-top: 0; padding: 15px 0; }
+
+/* SingleHeader */
+.SingleHeader{ position: relative; padding: 0; margin-top: 60px; margin-bottom: 40px; color: #3d4245;}
+.SingleHeader .FeatureImage{ height: 800px; overflow: hidden; }
+.SingleHeader .FeatureImage img{ display: block; width: 100%; height: 100%; object-fit: cover; }
+.SingleHeader .SingleHeaderInner{ width: auto; max-width: 1160px; height: auto; margin: auto; text-align: center;}
+.SingleHeader .SingleHeaderInner h1{ font-size: 26px; color: #183153; font-weight: 700; padding: 10px 0; letter-spacing: 0px; position: relative; display: inline-block;}
+.SingleHeader .SingleHeaderInner .Captions{ width: auto; max-width: 450px; margin: auto; font-size: 16px; text-align: center; font-weight: 300; letter-spacing: 0px; margin-top: 10px;}
+.SingleHeader .SingleHeaderInner .DateTime{ margin: 10px 0 0 0; padding: 0; font-size: 14px; color: #8c9396; font-weight: 300;}
+.SingleHeader .SingleHeaderInner .AuthorBadge{ margin: 0 auto; margin-top: 20px; text-align: center; max-width: 100px; height: 100px; border-radius: 100px; border: 5px solid #fff; overflow: hidden;}
+.SingleHeader .SingleHeaderInner .AuthorBadge img{ display: block; width: 100%; height: 100%; object-fit: cover; }
+.SingleHeader .SingleHeaderInner .AuthorBadgeName{ margin: 0; color: #8c9396; font-size: 14px; font-weight: 300;}
+.SingleHeader .SingleHeaderInner .AuthorBadgeName a{ color: #8c9396; }
+
+/* SinglePostContent */
+.SinglePostContent{ position: relative; width: auto; max-width: 800px; height: auto; margin: auto; padding: 0; color: #222; font-size: 17px; font-weight: 400; line-height: 28px; }
+.SinglePostContent ul{ margin: 20px 0 20px 20px;}
+.SinglePostContent ul li{ list-style-type: disc!important; }
+.SinglePostContent ol{  margin: 20px 0 20px 20px;}
+.SinglePostContent ol li{ list-style-type: decimal!important; }
+.SinglePostContent p{ margin: 10px 0 15px 0; display: inline-block;}
+.SinglePostContent p img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.SinglePostContent img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.SinglePostContent a{ color: #FAB006; }
+.SinglePostContent a:hover{ color: #183153; text-decoration: underline; }
+.SinglePostContent h2{ position: relative; color: #3d4245; margin: 45px 0px 0px 0px; display: block; padding-left: 23px; font-size: 23px; font-weight: 600; line-height: 33px; letter-spacing: 0; }
+.SinglePostContent h2:before{ width: 20px; height: 30px; position: absolute; content: '\23'; /* f152 | 23 */ font-size: 18px; color:#FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.SinglePostContent h3{ position: relative; color: #3d4245; margin: 30px 0px 0px 20px; padding-left: 23px; font-size: 21px; font-weight: 600; line-height: 30px; letter-spacing: 0; }
+.SinglePostContent h3:before{ width: 20px; height: 30px; position: absolute; content: '\23'; font-size: 18px; color: #FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.SinglePostContent .wp-block-gallery{ margin: 20px 0;}
+.SinglePostContent .wp-block-gallery .wp-block-image img { margin: 0;}
+.SinglePostContent .GoogleMapBox{ margin: 40px 0 0; position: relative; padding-bottom: 60%; height: 0; overflow: hidden; }
+.SinglePostContent .GoogleMapBox iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.SinglePostContent .wp-block-embed-youtube .wp-block-embed__wrapper{ margin: 40px 0 0; position: relative; padding-bottom: 56%; height: 0; overflow: hidden; }
+.SinglePostContent .wp-block-embed-youtube .wp-block-embed__wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* AffPartnersSingle */
+.AffPartnersSingle{ width: auto; height: auto; text-align: center; padding: 20px 0; margin: 30px 0; overflow: auto;}
+.AffPartnersSingleBox{ display: block; margin: auto;}
+.AffPartnersSingleBox img{ width: auto; max-width: 80px; height: auto; max-height: 22px; vertical-align: middle; margin-left: 5px;}
+.AffPartnersSingleBox a{ background-color: #eee; color: #183153; padding: 10px 20px 12px 20px; border: 1px solid #ccc; border-radius: 100px; }
+.AffPartnersSingleBox a:hover{ color: #000; background-color: #ccc; }
+.AffPartnersSingleBox p{ margin: 0; margin-bottom: 15px; color: #FAB006;}
+
+/* FacilitiesBox */
+.Facilities{ background-color: #fff; overflow: auto; clear: both; padding: 40px 0 40px 0; }
+.FacilitiesBox{ width: auto; max-width: 800px; height: auto; margin: auto; /*padding: 30px; border: 1px solid #f2f2f2; border-radius: 10px;*/ }
+.FacilitiesBox h2{ position: relative; color: #3d4245; margin: 0px; display: block; padding-left: 23px; font-size: 23px; font-weight: 600; line-height: 33px; letter-spacing: 0; }
+.FacilitiesBox h2:before{ width: 20px; height: 30px; position: absolute; content: '\23'; /* f152 | 23 */ font-size: 18px; color:#FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.FacilitiesBox ul{ margin: 0; margin-top: 5px; display: flex; flex-wrap: wrap; justify-content: left;}
+.FacilitiesBox ul li{ margin: 5px; padding: 5px 10px 5px 5px; text-align: center; font-size: 14px; background-color: #f4f6f7; border-radius: 100px; }
+.FacilitiesBox ul li i{ display: inline-block; font-size: 13px; background-color: #ffd43b; color: #282d2e; border-radius: 100px; padding: 5px 5px; margin-right: 5px;}
+
+/* ContactinfoSingle */
+.ContactinfoSingle{ background-color: #fff; overflow: auto; clear: both; padding: 40px 0 40px 0; }
+.ContactinfoSingleBox{ width: auto; max-width: 800px; height: auto; margin: auto; /*padding: 30px; border: 1px solid #f2f2f2; border-radius: 10px;*/ }
+.ContactinfoSingleBox h2{ position: relative; color: #3d4245; margin: 0px; margin-bottom: 5px; display: block; padding-left: 23px; font-size: 23px; font-weight: 600; line-height: 33px; letter-spacing: 0; }
+.ContactinfoSingleBox h2:before{ width: 20px; height: 30px; position: absolute; content: '\23'; /* f152 | 23 */ font-size: 18px; color:#FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.ContactinfoSingleBox .ContactinfoSingleInner{ display: flex; justify-content: space-between;}
+.ContactinfoSingleBox .ContactinfoSingleInner .Left{ width: 55%; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul{ margin: 0; padding: 0;}
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul li{ display: block; margin: 5px 0 5px 0; padding: 2px 0 5px 0; border-bottom: 1px solid #efefef; clear: both; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul li:last-child{ margin-bottom: 0;}
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul li p{ margin: 0; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul li p:nth-child(1){ font-size: 14px; font-weight: 300; color: #3d4245; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Left ul li p:nth-child(2){ font-size: 16px; font-weight: 500; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Map{ width: 40%; /*background-color: #3d4245;*/ }
+.ContactinfoSingleBox .ContactinfoSingleInner .Map .GoogleMapBox{ position: relative; padding-bottom: 100%; height: 0; overflow: hidden; border-radius: 10px; border: 1px solid #eee; }
+.ContactinfoSingleBox .ContactinfoSingleInner .Map .GoogleMapBox iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* ShareANDBooking */
+.ShareANDBooking{ width: auto; max-width: 800px; height: auto; margin: auto; padding: 20px 0 80px 0; display: flex; justify-content: space-between; }
+.ShareANDBooking .AffPartnersSingle{ margin: 0!important;}
+.ShareANDBooking .AffPartnersSingleBox{ margin: 0!important;}
+.BlogDetail .ShareANDBooking{ max-width: 1160px!important; display: block; margin: 0 auto; padding: 0 40px 40px 40px!important; margin-top: 30px;}
+/* SocialBox */
+.SocialBox{ width: auto; /*max-width: 800px; height: auto; margin: auto; padding: 20px 0 40px 0;*/ }
+.SocialBox p{ margin: 0; }
+.SocialBox .seed-social { margin: 10px 0 0 0!important; text-align: left!important;}
+
+/* ProtectPostBox */
+.ProtectPostBox{ width: auto; max-width: 350px; height: auto; margin: auto; margin-top: 40px; margin-bottom: 40px; background-color: #eee; border-radius: 10px; padding: 25px; }
+.ProtectPostBox p{ margin: 0 0 10px 0;}
+
+/* RelatedNewPost */
+.RelatedNewPost{ width: auto; max-width: 800px; height: auto; margin: auto; padding: 40px 0; }
+.RelatedNewPost h3{ width: auto; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: left; }
+.RelatedNewPost h3 i{ padding: 5px; border-radius: 100px; background-color:#ffd43b; color: #183153;}
+.RelatedNewPost ul{ padding: 0; margin: 0;}
+.RelatedNewPost ul li{ margin: 10px 0 10px 0; display: block; overflow: auto; border-radius: 10px;  }
+.RelatedNewPost ul li:last-child{ margin-bottom: 0;}
+.RelatedNewPost ul li a{ display: flex; justify-content: left; color: #282d2e; padding: 5px 0;transition: .3s ease; }
+/*.RelatedNewPost ul li a:hover{ background-color: #fff;transition: .3s ease;}*/
+.RelatedNewPost ul li a:hover .Title{ color: #FAB006;transition: .3s ease; }
+.RelatedNewPost ul li a:hover .Picture{ border-left: 5px solid #183153;transition: .3s ease;}
+.RelatedNewPost ul li .Picture{ width: calc(100% - 640px); margin-right: 20px; min-width: 140px; max-width: 140px; height: 90px; border-radius: 10px; overflow: hidden; border-left: 5px solid #FAB006; }
+.RelatedNewPost ul li .Picture img{ display: block; width: 100%; height: 100%; object-fit: cover; transition: .3s ease;}
+.RelatedNewPost ul li .Descriptions{ width: calc(100% - 140px); position: relative; }
+.RelatedNewPost ul li .Descriptions .Title{ font-size: 18px; font-weight: 600; font-family: 'Noto Sans Thai', sans-serif; margin-top: 0px; margin-bottom: 5px; }
+.RelatedNewPost ul li .Descriptions .Captions{ font-size: 14px; font-weight: 300; color: #666; margin-bottom: 5px;}
+.RelatedNewPost ul li .Descriptions .DateTime{ font-size: 13px; font-weight: 300; color: #666; margin-bottom: 5px;}
+.RelatedNewPost ul li .Descriptions .DateOpen{ font-size: 13px; font-weight: 300; color: #666; margin-bottom: 5px;}
+.RelatedNewPost ul li .Descriptions p{ margin: 0;}
+
+/* PostReccommend */
+.SinglePostReccommend{ width: auto; height: auto; padding: 80px 0; clear: both; background-color: #fff;}
+.SinglePostReccommend .SinglePostReccommendBox{ width: auto; max-width: 1160px; margin: auto; /*border-top: 1px solid #eee; padding-top: 40px;*/ }
+.SinglePostReccommend .SinglePostReccommendBox .Header{ display: flex; align-items: center; margin-bottom: 0px;}
+.SinglePostReccommend .SinglePostReccommendBox .Header h2{ width: 50%; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: left;}
+.SinglePostReccommend .SinglePostReccommendBox .Header h2 i{ padding: 5px; border-radius: 100px; background-color:#ffd43b; color: #183153;}
+.SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll{ width: 50%; font-size: 15px; font-weight: 500; text-align: right; }
+.SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll i{ font-size: 10px;}
+.SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll a{ display: inline-block; color:#183153; font-size: 12px; font-weight: 400; background-color: #f8dd7c; padding: 4px 10px 4px 10px; border-radius: 100px; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox .Header .SeeAll a:hover{ background-color: #183153; color:#ffd43b; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul{ margin: 0; padding: 0; display: flex; flex-wrap: wrap;}
+.SinglePostReccommend .SinglePostReccommendBox ul li{ width: 31.3%; margin: 2% 1.5% 3% 1.5%; position: relative;}
+.SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+0){ margin-right: 0;}
+.SinglePostReccommend .SinglePostReccommendBox ul li:nth-child(3n+1) { margin-left: 0;}
+.SinglePostReccommend .SinglePostReccommendBox ul li p{ margin: 0; padding: 0;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Picture{ width: 100%; height: 220px; border-radius: 10px; overflow: hidden; position: relative;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Picture img{ display: block; width: 100%; height: 100%; object-fit: cover; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li a:hover img{ transform: scale(1.05); transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Title{ margin: 15px 0 10px 0; font-size: 18px; font-family: 'Noto Sans Thai', sans-serif; font-weight: 600;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Captions{ margin: 10px 0; color: #666; font-size: 14px; font-weight: 300;/* white-space: nowrap; overflow: hidden; text-overflow: ellipsis;*/}
+.SinglePostReccommend .SinglePostReccommendBox ul li a:hover .Captions{ color: #666;}
+.SinglePostReccommend .SinglePostReccommendBox ul li a{ color: #282d2e; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li a:hover{ color: #FAB006; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Title a{ color: #282d2e; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .Title a:hover{ color: #FAB006; transition: .3s ease;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .DateTime{ font-family: Helvetica Neue,Helvetica,Thonburi,Arial,sans-serif; font-size: 12px; color: #8d8d8d; font-weight: 400; display: flex; justify-content: space-between;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .DateTime span{ display: inline-block; margin-right: 10px;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .DateTime span.TypeShow{ display: inline-block; padding: 3px 10px 3px 10px; background-color: #eee; font-size: 11px; border-radius: 100px;}
+.SinglePostReccommend .SinglePostReccommendBox ul li .DateOpen{ margin-bottom: 10px; font-size: 12px; color: #8d8d8d; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+/* ContactUsBox */
+.ContactUsBox{ width: auto; max-width: 800px; height: auto; margin: auto; padding: 40px 0; }
+.ContactFormBox{ max-width: 450px; margin: auto; margin-top: 30px; margin-bottom:30px; }
+.ContactFormBox ul{ padding: 0; margin-top: 40px;}
+.ContactFormBox ul li{ padding: 0; margin: 10px 0 30px 0;}
+.ContactFormBox ul li label{ display: block;}
+.ContactFormBox ul li .red{ color: red;}
+.ContactFormBox ul li input[type=text]{ font-family: 'Sarabun', sans-serif; background-color: #fefefe; font-size: 18px; display: block; width: 100%; margin-top: 5px; padding: 10px 10px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0px solid #ccc; border-bottom: 1px solid #ccc; transition: .3s ease; }
+.ContactFormBox ul li input[type=text]:focus { outline:none!important; background-color: #fff; transition: .3s ease;}
+.ContactFormBox ul li input[type=tel]{ font-family: 'Sarabun', sans-serif; background-color: #fefefe; font-size: 18px; display: block; width: 100%; margin-top: 5px; padding: 10px 10px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0px solid #ccc; border-bottom: 1px solid #ccc; transition: .3s ease; }
+.ContactFormBox ul li input[type=tel]:focus { outline:none!important; background-color: #fff; transition: .3s ease;}
+.ContactFormBox ul li input[type=email]{ font-family: 'Sarabun', sans-serif; background-color: #fefefe; font-size: 18px; display: block; width: 100%; padding: 10px 10px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0px solid #ccc;border-bottom: 1px solid #ccc; transition: .3s ease; }
+.ContactFormBox ul li input[type=email]:focus { outline:none!important; background-color: #fff; transition: .3s ease;}
+.ContactFormBox ul li textarea{ font-family: 'Sarabun', sans-serif; background-color: #fefefe; font-size: 18px; display: block; width: 100%; padding: 10px 10px; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0px solid #ccc;border-bottom: 1px solid #ccc; transition: .3s ease; }
+.ContactFormBox ul li textarea:focus { outline:none!important; background-color: #fff; transition: .3s ease;}
+.ContactFormBox ul li input[type=submit] { font-family: 'Noto Sans Thai', sans-serif; font-weight: 600; position: relative; cursor: pointer; background-color: #FAB006; border:0px; color: #fff; letter-spacing: 0px; padding: 8px 30px 8px 30px; font-size: 20px; border-radius: 100px; -webkit-appearance: none; -moz-appearance: none; appearance: none; transition: all .3s; }
+.ContactFormBox ul li input[type=submit]:hover{ background-color: #282d2e; transition: all .3s; }
+.ContactFormBox ul li:last-child{ text-align: center; }
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output{ text-align: center!important; padding: 15px!important;}
+.wpcf7 form.sent .wpcf7-response-output{ text-align: center!important; padding: 15px!important;}
+.wpcf7-spinner{ display: block!important; margin: 0 auto!important; margin-top: 10px!important;}
+
+/* AboutUs */
+.AboutUs{ width: auto; height: auto; margin: auto; padding: 40px 0; }
+.AboutUsBox{ position: relative; width: auto; max-width: 800px; background-color: #fff; height: auto; margin: auto; padding: 40px; color: #222; font-size: 17px; font-weight: 400; line-height: 28px; }
+.AboutUsBox ul{ margin: 20px 0 20px 20px;}
+.AboutUsBox ul li{ list-style-type: disc!important; }
+.AboutUsBox ol{  margin: 20px 0 20px 20px;}
+.AboutUsBox ol li{ list-style-type: decimal!important; }
+.AboutUsBox p{ margin: 10px 0 15px 0; display: inline-block;}
+.AboutUsBox p img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.AboutUsBox img{ width: auto; max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;}
+.AboutUsBox a{ color: #FAB006; }
+.AboutUsBox a:hover{ color: #183153; text-decoration: underline; }
+.AboutUsBox h2{ position: relative; color: #3d4245; margin: 45px 0px 0px 0px; display: block; padding-left: 23px; font-size: 23px; font-weight: 600; line-height: 33px; letter-spacing: 0; }
+.AboutUsBox h2:before{ width: 20px; height: 30px; position: absolute; content: '\23'; /* f152 | 23 */ font-size: 18px; color:#FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.AboutUsBox h3{ position: relative; color: #3d4245; margin: 30px 0px 0px 20px; padding-left: 23px; font-size: 21px; font-weight: 600; line-height: 30px; letter-spacing: 0; }
+.AboutUsBox h3:before{ width: 20px; height: 30px; position: absolute; content: '\23'; font-size: 18px; color: #FFD43B; font-family: "Font Awesome 5 Free"; left: 0;}
+.AboutUsBox .wp-block-gallery{ margin: 20px 0;}
+.AboutUsBox .wp-block-gallery .wp-block-image img { margin: 0;}
+.AboutUsBox .GoogleMapBox{ margin: 40px 0 0; position: relative; padding-bottom: 60%; height: 0; overflow: hidden; }
+.AboutUsBox .GoogleMapBox iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.AboutUsBox .wp-block-embed-youtube .wp-block-embed__wrapper{ margin: 40px 0 0; position: relative; padding-bottom: 56%; height: 0; overflow: hidden; }
+.AboutUsBox .wp-block-embed-youtube .wp-block-embed__wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.AboutUsBox ul.wp-block-social-links{ margin: 0!important;}
+.AuthorsList{ position: relative; width: auto; max-width: 800px; margin: auto; padding: 40px 0; }
+.AuthorsList h2{ font-size: 20px; font-weight: 600; letter-spacing: 1px; text-align: center; }
+.AuthorsList ul{ display: flex; justify-content: center; flex-wrap: nowrap; margin-top: 20px;}
+.AuthorsList ul li{ margin: 10px 30px; text-align: center; }
+.AuthorsList ul li p{ margin: 0; }
+.AuthorsList ul li .AuthorImage{ width: 150px; height: 150px; margin: auto; overflow: hidden; border-radius: 100px; margin-bottom: 10px;}
+.AuthorsList ul li .AuthorImage img{ width: auto; max-width: 150px; height: auto;}
+.AuthorsList ul li .AuthorName{ font-size: 16px; font-weight: 600; text-transform: uppercase;}
+.AuthorsList ul li .Bio{ font-size: 14px; margin-top: 10px; font-style: italic; padding: 0 10px;}
+
+/* PageSearch */
+.PageSearch{ width: auto; height: auto; padding: 20px 0;}
+.PageSearchBox{ width: auto; max-width:1160px; margin: auto; margin: auto; text-align: center; }
+.PageSearchBox h2{ font-size: 25px; font-weight: 600; letter-spacing: 1px; text-align: left; border-bottom: 1px solid #f2f2f2; padding-bottom: 10px; margin-top: 30px; margin-bottom: 30px;}
+.PageSearchBox ul{ margin: 0;}
+.PageSearchBox ul li{ margin: 20px 0; transition: .3s ease;}
+.PageSearchBox ul li a{ color: #203446; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 15px; border-radius: 10px; transition: .3s ease;}
+.PageSearchBox ul li a:hover{ background-color: #f2f2f2; transition: .3s ease;}
+.PageSearchBox ul li .Picture{ width: 20%; max-width: 300px; height: 160px; overflow: hidden; border-radius: 10px; }
+.PageSearchBox ul li .Picture img{ display: block; width: 100%; height: 100%; object-fit: cover;}
+.PageSearchBox ul li .Descriptions{ width: 78%; font-size: 15px; text-align: left;}
+.PageSearchBox ul li .Descriptions .Title{ margin: 0; font-size: 21px; font-weight: 600; line-height: 30px; font-family: 'Noto Sans Thai', sans-serif;}
+.PageSearchBox ul li .Descriptions .Title a:hover{ color: #FB9D2E;}
+.PageSearchBox ul li .Descriptions .Captions{ margin: 10px 0;}
+.PageSearchBox ul li .Descriptions .Date{ margin: 0; color: #999; font-size: 14px; font-weight: 300;}
+.Padding40{ padding: 40px;}

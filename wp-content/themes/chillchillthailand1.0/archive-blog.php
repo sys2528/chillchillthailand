@@ -10,17 +10,17 @@
     <div class="HeaderPage">
         <div class="HeaderPageBox">
             <h1>บทความและข่าวสาร</h1>
-            <p class="Captions">อัพเดทเรื่องราวต่างๆ บทความที่น่าสนใจ และข่าวสารต่างๆ เกี่ยวกับการท่องเที่ยว บลาๆ ...</p>
+            <p class="Captions">อัพเดทข่าวสารเกี่ยวกับเรื่องเที่ยว บทความที่น่าสนใจเกี่ยวกับเรื่องเที่ยว เรื่องน่ารู้ สถานที่เที่ยว ที่กิน ที่พัก วัฒนธรรม รวมถึงกิจกรรมที่น่าสนใจในประเทศไทย</p>
         </div>
     </div>
     <!-- HeaderPage -->
 
     <!-- PostReccommend -->
-    <div class="PostReccommend" style="padding-top:20px;">
+    <div class="PostReccommend" style="padding-top:20px;background-image:none;">
         <div class="PostReccommendBox">
             <?php
                 $wp_query = null;
-                $wp_query = new WP_Query( array('post_type'=>'blog','posts_per_page'=>get_option('posts_per_page'),'orderby'=>'date','order'=>'DESC','post_status'=>'publish','paged'=>$paged));
+                $wp_query = new WP_Query( array('post_type'=>'blog','orderby'=>'date','order'=>'DESC','post_status'=>'publish','paged'=>$paged));
                 if ($wp_query->have_posts()) {
             ?>
             <ul>
@@ -33,9 +33,9 @@
                         $first_category = wp_get_post_terms( get_the_ID(), 'blog_category' )[0]->name;
                 ?>
                 <li>
-                    <p class="Picture"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>" width="<?php echo $image_url[1]; ?>" height="<?php echo $image_url[2]; ?>"></a></p>
+                    <p class="Picture"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank"><img src="<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>" width="<?php echo $image_url[1]; ?>" height="<?php echo $image_url[2]; ?>"></a></p>
                     <p class="Title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></p>
-                    <p class="DateTime"><span><i class="fa-regular fa-calendar-days"></i> อัพเดท : <?php the_modified_date('d.m.Y'); ?></span> <span class="TypeShow"><?php echo $first_category; ?></span></p>
+                    <p class="DateTime"><span><i class="fa-regular fa-clock"></i> <?php the_modified_date('d.m.Y'); ?></span> <span class="TypeShow"><?php echo $first_category; ?></span></p>
                 </li>
                 <?php endwhile; ?>
             </ul>

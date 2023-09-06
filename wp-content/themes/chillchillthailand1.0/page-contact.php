@@ -9,13 +9,15 @@
 	<!-- HeaderPage -->
 	<div class="HeaderPage clr">
         <div class="HeaderPageBox">
-            <h1>Contact ติดต่อเรา</h1>
-            <p class="Descriptions">xxxx xxx xx</p>
+            <h1>ติดต่อเรา</h1>
         </div>
     </div>
     <!-- HeaderPage -->
 
-	<?php //echo do_shortcode('[contact-form-7 id="5" title="Contact to CCT"]'); ?>
-	<?php the_content('Read the rest of this entry &raquo;'); ?>
+	<!-- ContactUsBox -->
+    <div class="ContactUsBox">
+	    <?php the_content('Read the rest of this entry &raquo;'); ?>
+    </div>
+    <!-- End ContactUsBox -->
 
 <?php get_footer(); ?>

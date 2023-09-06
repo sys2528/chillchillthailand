@@ -20,8 +20,7 @@
     <div class="HeaderPage clr">
         <div class="HeaderPageBox">
             <h1><?php the_title(); ?></h1>
-            <p class="DateCategory"><i class="fa-regular fa-calendar-days"></i> อัพเดทเมื่อ : <?php the_modified_date('d.m.Y'); ?> | หมวด : <?php echo $act_parent_name; ?></p>
-			<p><?php if(function_exists('seed_social')) { seed_social(); } ?></p>
+            <p class="DateCategory"><i class="fa-regular fa-clock"></i> <?php the_modified_date('d.m.Y'); ?>  <i class="fa-solid fa-minus"></i> <span class="CategorySingleBlog"><?php echo $act_parent_name; ?></span></p>
         </div>
     </div>
     <!-- HeaderPage -->
@@ -32,6 +31,12 @@
 				$image_id = get_post_thumbnail_id();
 				$image_url = wp_get_attachment_image_src($image_id, 'full', true);
 				if(empty($image_id)){$image_url[0] = get_bloginfo('template_directory').'/assets/images/no-photo.jpg';}
+
+				if (has_excerpt()) {
+					$ExerptDisplay = wp_strip_all_tags(get_the_excerpt());
+				}else{
+					$ExerptDisplay = '';
+				}
 	?>
 
 	<!-- BlogDetail -->
@@ -46,9 +51,24 @@
 				<div class="FeatureImageBlog clr"><img src="<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>" width="<?php echo $image_url[1]; ?>" height="<?php echo $image_url[2]; ?>"></div>
 				<!-- End FeatureImageBlog -->
 
+				<?php if($ExerptDisplay!=""){ ?>
+				<!-- ExcerptSingleBox -->
+				<div class="ExcerptSingleBox"><?php echo $ExerptDisplay; ?></div>
+				<!-- End ExcerptSingleBox -->
+				<?php } ?>
+
 				<div class="DetailBlog">
 					<?php the_content('Read the rest of this entry &raquo;'); ?>
 				</div>
+
+				<!-- ShareANDBooking -->
+				<div class="ShareANDBooking">
+					<div class="SocialBox clr">
+						<p>แชร์บทความและข่าวนี้</p>
+						<?php if(function_exists('seed_social')){ seed_social(); } ?>
+					</div>
+				</div>
+				<!-- End ShareANDBooking -->
 
 			</div>
 			<!-- End LeftBlog -->
@@ -57,7 +77,7 @@
 			<div class="RightBlog">
 				<!-- RightInfo -->
 				<div class="RightInfo">
-					<div class="Title">โดยนักเขียน <i class="fa-solid fa-pen-nib"></i></div>
+					<div class="Title">บทความและข่าวโดย <i class="fa-solid fa-pen-nib"></i></div>
 					<div class="Detail">
 					<?php 
 						$author_id = get_the_author_meta( 'ID' );
@@ -68,30 +88,27 @@
 						$width = $author_badge['sizes'][ $size . '-width' ];
 						$height = $author_badge['sizes'][ $size . '-height' ];
 					?>
-					<p class="AuthorBadge"><img src="<?php echo $author_badge['url']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" /></p>
-					<p class="Center">ชื่อ : <?php the_author_meta('nickname'); ?></p>
-					<p>Bio : <?php the_author_meta('description'); ?></p>
+					<p class="AuthorBadge"><img src="<?php echo $author_badge['url']; ?>" alt="รูปภาพของ bloger : <?php the_author_meta('nickname'); ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" /></p>
+					<p class="Center"><?php the_author_meta('nickname'); ?></p>
+					<!--<p>Bio : <?php //the_author_meta('description'); ?></p>-->
 					<?php
 						$wp_queryCount = null;
 						$wp_queryCount = new WP_Query( array('post_type' => array('post','blog'), 'author'=> $author_id));
 						$countPost = $wp_queryCount->found_posts;
 					?>
-					<p>เขียนมาแล้วทั้งหมด : <a href="<?php bloginfo('url'); ?>/blogger/<?php the_author_meta('user_nicename'); ?>"><?php echo number_format($countPost,0); ?></a> โพสต์</p>
+					<!--<p>เขียนมาแล้วทั้งหมด : <a href="<?php //bloginfo('url'); ?>/blogger/<?php //the_author_meta('user_nicename'); ?>"><?php //echo number_format($countPost,0); ?></a> โพสต์</p>-->
 					</div>
 
-				</div>
 
-				<!-- RightInfo -->
-				<div class="RightInfo">
 
-					<div class="TitleIn">ข้อมูลที่น่าสนใจ <i class="fa-solid fa-circle-info"></i></div>
+					<!--<div class="TitleIn">ข้อมูลที่น่าสนใจ <i class="fa-solid fa-circle-info"></i></div>
 					<div class="Detail">
 						<ul>
 							<li>ช่วงไหนที่มีฟูลมูนปาร์ตี้ คือช่วงพีคของเกาะพะงัน</li>
 							<li>นักท่องเที่ยวจากทั่วทุกสารทิศจะเดินทางมาร่วมสนุกกับปาร์ตี้ริมทะเลสุดมันส์นี้กันอย่างเนืองแน่น</li>
 						</ul>
-					</div>
-					<div class="TitleIn">บทความและข่าวสารแนะนำ <i class="fa-regular fa-thumbs-up"></i></div>
+					</div>-->
+					<div class="TitleIn">บทความและข่าวล่าสุด <i class="fa-regular fa-newspaper"></i></div>
 					<div class="DetailIn">
 						<?php
 							$wp_query_news = null;
@@ -104,13 +121,15 @@
 								$image_ID_news = get_post_thumbnail_id();
 								$image_URL_news = wp_get_attachment_image_src($image_ID_news, 'medium', true);
 								if(empty($image_ID_news)){$image_URL_news[0] = get_bloginfo('template_directory').'/assets/images/no-photo.jpg';}	
+
+								$first_category = wp_get_post_terms( get_the_ID(), 'blog_category' )[0]->name;
 							?>
-							<li><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo $image_URL_news[0]; ?>" alt="<?php the_title(); ?>" width="<?php echo $image_URL_news[1]; ?>" height="<?php echo $image_URL_news[2]; ?>"></a></p><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></p></li>
+							<li><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo $image_URL_news[0]; ?>" alt="<?php the_title(); ?>" width="<?php echo $image_URL_news[1]; ?>" height="<?php echo $image_URL_news[2]; ?>"></a></p><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a><span class="CategorySingleRight"><i class="fa-regular fa-clock"></i> <?php the_modified_date('d.m.Y'); ?> <i class="fa-solid fa-minus"></i> <?php echo $first_category; ?></span></p></li>
 							<?php endwhile;  ?>
 						</ul>
 						<?php wp_reset_postdata(); ?>
 						<?php }else{ ?>
-							<p class="EmptyData">ยังไม่มีข้อมูลสื่อประชาสัมพันธ์</p>
+							<p class="EmptyData">ยังไม่มีข้อมูลบทความและข่าวที่เกี่ยวข้อง</p>
 						<?php } ?>
 					</div>
 				</div>
@@ -123,6 +142,8 @@
 
 	</div>
 	<!-- End BlogDetail -->
+
+	
 
 		<?php } ?>
 	<?php } ?>
